@@ -1,6 +1,6 @@
 ---
 name: Bug Report / 漏洞反馈
-about: Report a bug or issue / 反馈 bug 或其他问题
+about: Report a bug or issue / 反馈漏洞或其他问题
 title: '[Bug] '
 labels: bug
 ---
