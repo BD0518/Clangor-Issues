@@ -2,6 +2,7 @@ name: "🐛 Bug Report / 问题反馈"
 description: "Report a bug to help improve Clangor. / 报器鸣之瑕，助其尽善"
 title: "[Bug]: "
 labels: ["bug"]
+assignees: ["BD0518"]
 body:
   - type: markdown
     attributes:
