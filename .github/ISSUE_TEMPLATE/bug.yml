@@ -69,4 +69,4 @@ body:
         Upload to [mclo.gs](https://mclo.gs/) and paste the link. 请上传至 [mclo.gs](https://mclo.gs/) 并在此处粘贴链接。
       placeholder: "ex. https://mclo.gs/XXXXXXX (例如: https://mclo.gs/XXXXXXX)"
     validations:
-      required: false
+      required: true
