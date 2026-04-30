@@ -1,0 +1,72 @@
+name: "🐛 Bug Report / 问题反馈"
+description: Report a bug to help us improve Clangor.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! 感谢你花时间提交反馈！
+
+  - type: dropdown
+    id: loader
+    attributes:
+      label: "Mod Loader / 加载器"
+      description: "Please confirm you are using Fabric. 请确认你使用的是 Fabric。"
+      options:
+        - Fabric
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: "Minecraft Version / 游戏版本"
+      description: "Which version of Minecraft are you running? 你运行的是哪个游戏版本？"
+      placeholder: "e.g. 1.21.1 / 26.1 (例如: 1.21.1 或 26.1)"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: "Mod Version / 模组版本"
+      description: "Which version of the mod do you have installed? 你安装的是哪个模组版本？"
+      placeholder: "e.g. 1.0.0 (例如: 1.0.0)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Problem Description / 问题描述"
+      description: "What happened? 发生了什么？"
+      placeholder: "Please describe the bug in detail. 请详细描述问题内容。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce / 重现步骤"
+      description: "How to trigger it? 如何重现问题？"
+      placeholder: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: false
+
+  - type: input
+    id: log_link
+    attributes:
+      label: "latest.log / 最新日志"
+      description: |
+        For best results, please **restart and reproduce** before uploading. 为了获得最佳分析结果，请**重启并重现**后上传。
+        - **Official Launcher / 官方:** `.minecraft/logs/`
+        - **PCL2 (Isolated / 版本隔离):** `.minecraft/versions/[Name]/logs/`
+        - **Others / 其他:** `[Game Folder]/logs/`
+        Upload to [mclo.gs](https://mclo.gs/) and paste the link. 请上传至 mclo.gs 并在此处粘贴链接。
+      placeholder: "ex. https://mclo.gs/XXXXXXX (例如: https://mclo.gs/XXXXXXX)"
+    validations:
+      required: false
