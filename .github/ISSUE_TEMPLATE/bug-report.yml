@@ -6,18 +6,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! 感谢你花时间提交反馈！
-  
+        Thanks for taking the time to fill out this bug report! 感谢你提交反馈！
+        **Note:** Currently, Clangor only supports **Fabric**.
+        **注意：** Clangor 目前仅支持 **Fabric**。
+
   - type: dropdown
     id: loader
     attributes:
       label: "Mod Loader / 加载器"
-      description: What mod loader are you using? 你使用的是哪个加载器？
+      description: Please confirm you are using Fabric. 请确认你使用的是 Fabric。
       options:
-        - Forge
-        - NeoForge
         - Fabric
-        - Quilt
     validations:
       required: true
 
@@ -25,7 +24,8 @@ body:
     id: minecraft_version
     attributes:
       label: "Minecraft Version / 游戏版本"
-      placeholder: "e.g. 1.20.1"
+      description: Which version are you using? 你使用的是哪个版本？
+      placeholder: "e.g. 1.21.1 / 26.1 (例如: 1.21.1 或 26.1)"
     validations:
       required: true
 
@@ -33,7 +33,7 @@ body:
     id: mod_version
     attributes:
       label: "Mod Version / 模组版本"
-      placeholder: "e.g. 1.0.0"
+      placeholder: "e.g. 1.0.0 (例如: 1.0.0)"
     validations:
       required: true
 
@@ -41,28 +41,38 @@ body:
     id: description
     attributes:
       label: "Problem Description / 问题描述"
-      description: Briefly describe the issue you are experiencing. 请简要描述你遇到的问题。
+      description: What happened? 发生了什么？
+      placeholder: "Please describe the bug in detail. 请详细描述漏洞内容。"
     validations:
       required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce / 重现步骤"
+      description: How to trigger it? 如何让漏洞再次出现？
+      placeholder: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: false
 
   - type: textarea
     id: crash_log
     attributes:
       label: "Crash Log / 崩溃日志"
       description: |
-        If you have a crash, upload your log to [mclo.gs](https://mclo.gs/) and paste the link here.
-        如有崩溃，请将日志上传至 [mclo.gs](https://mclo.gs/) 并在此处粘贴链接。
-    validations:
-      required: false
-
-  - type: textarea
-    id: steps
-    attributes:
-      label: "Steps to Reproduce / 重现步骤"
-      description: How can we make the bug happen again? 如何让这个漏洞再次出现？
-      placeholder: |
-        1. 
-        2. 
-        3. 
+        For best results, please **restart and reproduce** before uploading `latest.log`.
+        为了获得最佳分析结果，请**重启并重现**后上传最新的 `latest.log`。
+        
+        - **Official Launcher / 官方启动器:** `.minecraft/logs/`
+        - **Modrinth / CurseForge:** `[Instance Folder]/logs/`
+        - **PCL2 (Isolated / 版本隔离):** `.minecraft/versions/[Name]/logs/`
+        - **PCL2 (Normal / 未隔离):** `.minecraft/logs/`
+        
+        *Tip: Use the "Open Folder" button in your launcher. / 提示：建议使用启动器的“打开文件夹”按钮。*
+        
+        Upload to [mclo.gs](https://mclo.gs/) and paste the link here.
     validations:
       required: false
