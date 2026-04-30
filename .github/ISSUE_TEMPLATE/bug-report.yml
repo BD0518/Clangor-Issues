@@ -1,0 +1,68 @@
+name: "🐛 Bug Report / 漏洞反馈"
+description: Report a bug to help us improve Clangor.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! 感谢你花时间提交反馈！
+  
+  - type: dropdown
+    id: loader
+    attributes:
+      label: "Mod Loader / 加载器"
+      description: What mod loader are you using? 你使用的是哪个加载器？
+      options:
+        - Forge
+        - NeoForge
+        - Fabric
+        - Quilt
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft_version
+    attributes:
+      label: "Minecraft Version / 游戏版本"
+      placeholder: "e.g. 1.20.1"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: "Mod Version / 模组版本"
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Problem Description / 问题描述"
+      description: Briefly describe the issue you are experiencing. 请简要描述你遇到的问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash_log
+    attributes:
+      label: "Crash Log / 崩溃日志"
+      description: |
+        If you have a crash, upload your log to [mclo.gs](https://mclo.gs/) and paste the link here.
+        如有崩溃，请将日志上传至 [mclo.gs](https://mclo.gs/) 并在此处粘贴链接。
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce / 重现步骤"
+      description: How can we make the bug happen again? 如何让这个漏洞再次出现？
+      placeholder: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: false
